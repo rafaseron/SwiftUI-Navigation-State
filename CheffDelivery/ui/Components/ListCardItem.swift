@@ -27,9 +27,14 @@ struct ShopsList: View{
                 .font(.headline)
             
             ForEach(shopsList){ loja in
-                ListCardItem(shopItem: loja)
+                NavigationLink {
+                    ProductDetailScreen(shopItem: loja)
+                } label: {
+                    ListCardItem(shopItem: loja)
+                }
             }
         }.padding(.horizontal, 40)
+            .foregroundStyle(.black)
         
     }
 }

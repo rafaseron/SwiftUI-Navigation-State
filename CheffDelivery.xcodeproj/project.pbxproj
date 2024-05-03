@@ -16,6 +16,7 @@
 		13B9FDC22BD7EFCC009C12D5 /* CheffDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B9FDC12BD7EFCC009C12D5 /* CheffDeliveryTests.swift */; };
 		13B9FDCC2BD7EFCC009C12D5 /* CheffDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B9FDCB2BD7EFCC009C12D5 /* CheffDeliveryUITests.swift */; };
 		13B9FDCE2BD7EFCC009C12D5 /* CheffDeliveryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B9FDCD2BD7EFCC009C12D5 /* CheffDeliveryUITestsLaunchTests.swift */; };
+		13C36E172BE568DB00EC64DE /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C36E162BE568DB00EC64DE /* ProductDetailScreen.swift */; };
 		13C85C522BD9DE480095166E /* CategoriasGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C85C512BD9DE480095166E /* CategoriasGridView.swift */; };
 		13C85C552BDA8A680095166E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C85C542BDA8A680095166E /* Models.swift */; };
 		13C85C572BDA8CAD0095166E /* DataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C85C562BDA8CAD0095166E /* DataSourceMock.swift */; };
@@ -53,6 +54,7 @@
 		13B9FDC72BD7EFCC009C12D5 /* CheffDeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheffDeliveryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B9FDCB2BD7EFCC009C12D5 /* CheffDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheffDeliveryUITests.swift; sourceTree = "<group>"; };
 		13B9FDCD2BD7EFCC009C12D5 /* CheffDeliveryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheffDeliveryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13C36E162BE568DB00EC64DE /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
 		13C85C512BD9DE480095166E /* CategoriasGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasGridView.swift; sourceTree = "<group>"; };
 		13C85C542BDA8A680095166E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		13C85C562BDA8CAD0095166E /* DataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceMock.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				13B9FDB22BD7EFC9009C12D5 /* HomeScreen.swift */,
+				13C36E162BE568DB00EC64DE /* ProductDetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C36E172BE568DB00EC64DE /* ProductDetailScreen.swift in Sources */,
 				131266A12BDD56A7007C2DA2 /* ListCardItem.swift in Sources */,
 				13B9FDB32BD7EFC9009C12D5 /* HomeScreen.swift in Sources */,
 				13B9FDB12BD7EFC9009C12D5 /* CheffDeliveryApp.swift in Sources */,
