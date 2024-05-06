@@ -18,7 +18,8 @@ struct Loja: Identifiable{
     let id: Int
     let label: String
     let logoImage: String
-    //let headerImage: String
+    let headerImage: String
+    let stars: Int
 }
 
 struct Product: Identifiable{

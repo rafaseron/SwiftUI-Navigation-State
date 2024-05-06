@@ -9,13 +9,80 @@ import SwiftUI
 
 struct ProductDetailScreen: View {
     let shopItem: Loja
+    //let productList: [Product]
     
     
     var body: some View {
-        Text(shopItem.label)
+        ScrollView{
+            LazyVStack(alignment: .leading, spacing: 16){
+                Image(shopItem.headerImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 240)
+                
+                VStack(spacing: 8){
+                    HStack(spacing: 150){
+                        Text(shopItem.label)
+                            .font(.title)
+                            .bold()
+                        
+                        Image(shopItem.logoImage)
+                    }.offset(x: 20)
+                    
+                    Spacer()
+                    
+                    StoreAddress(store: shopItem)
+                }
+                
+                Spacer()
+                
+                Text("Produtos")
+                    .font(.title2)
+                    .bold()
+                    .offset(x: 20)
+                
+                Spacer()
+                
+                ProductCardList(productList: productList)
+                    .offset(x: 20)
+            }
+        }
+        
+    }
+}
+
+struct StoreAddress: View {
+    let store: Loja
+    
+    var body: some View {
+        HStack(spacing: 15){
+            Text("Rua Principal, 123 São Paulo SP")
+            
+            //Arrumar esse ForEach que ele nao funciona usando Int para iterar
+            /*
+            ForEach (starsArray) { stars in
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }*/
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+                .frame(width: 8)
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+                .frame(width: 8)
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+                .frame(width: 8)
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+                .frame(width: 8)
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+                .frame(width: 8)
+        }.offset(x: 15)
     }
 }
 
 #Preview {
-    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo"))
+    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", stars: 4)/*, productList: productList*/)
 }

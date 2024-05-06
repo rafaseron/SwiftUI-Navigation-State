@@ -23,6 +23,8 @@ struct ProductCardItem: View{
                     .bold()
             }
             
+            Spacer()
+            
             Image(product.image)
                 .resizable()
                 .scaledToFit()
@@ -38,7 +40,7 @@ struct ProductCardList: View {
     let productList: [Product]
     
     var body: some View {
-        LazyVStack(spacing: 16){
+        LazyVStack(alignment: .leading, spacing: 16){
             
             ForEach(productList){ product in
                 ProductCardItem(product: product)
