@@ -44,7 +44,7 @@ struct ProductDetailScreen: View {
                 Spacer()
                 
                 ProductCardList(productList: productList)
-                    .offset(x: 20)
+                    .offset(x: 18)
             }
         }
         
@@ -56,7 +56,7 @@ struct StoreAddress: View {
     
     var body: some View {
         HStack(spacing: 15){
-            Text("Rua Principal, 123 São Paulo SP")
+            Text(store.address)
             
             //Arrumar esse ForEach que ele nao funciona usando Int para iterar
             /*
@@ -84,5 +84,5 @@ struct StoreAddress: View {
 }
 
 #Preview {
-    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", stars: 4)/*, productList: productList*/)
+    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Cuiaba Dourados MS", stars: 4)/*, productList: productList*/)
 }

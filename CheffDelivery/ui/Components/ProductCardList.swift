@@ -46,7 +46,7 @@ struct ProductCardList: View {
                 ProductCardItem(product: product)
             }
             
-        }
+        }.frame(width: 360)
     }
 }
 
