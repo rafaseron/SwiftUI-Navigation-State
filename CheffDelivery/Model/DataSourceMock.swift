@@ -18,11 +18,11 @@ let listaCategorias: [Categoria] = [
 ]
 
 let listaDeLojas: [Loja] = [
-    Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", stars: 4),
-    Loja(id: 2, label: "Padaria", logoImage: "bakery-logo", headerImage: "bakery-header", stars: 4),
-    Loja(id: 3, label: "Carbron", logoImage: "carbron-logo", headerImage: "carbron-header", stars: 4),
-    Loja(id: 4, label: "Food Court", logoImage: "food-court-logo", headerImage: "food-court-header", stars: 4),
-    Loja(id: 5, label: "Monstro Burger", logoImage: "monstro-burger-logo", headerImage: "monstro-burger-header", stars: 4),
+    Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Principal, 123 São Paulo SP", stars: 4),
+    Loja(id: 2, label: "Padaria", logoImage: "bakery-logo", headerImage: "bakery-header", address: "Rua Principal, 123 São Paulo SP", stars: 4),
+    Loja(id: 3, label: "Carbron", logoImage: "carbron-logo", headerImage: "carbron-header", address: "Rua Principal, 123 São Paulo SP", stars: 4),
+    Loja(id: 4, label: "Food Court", logoImage: "food-court-logo", headerImage: "food-court-header", address: "Rua Principal, 123 São Paulo SP", stars: 4),
+    Loja(id: 5, label: "Monstro Burger", logoImage: "monstro-burger-logo", headerImage: "monstro-burger-header", address: "Rua Principal, 123 São Paulo SP", stars: 4),
 ]
 
 let productList: [Product] = [

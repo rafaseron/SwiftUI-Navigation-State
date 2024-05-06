@@ -19,6 +19,7 @@ struct Loja: Identifiable{
     let label: String
     let logoImage: String
     let headerImage: String
+    let address: String
     let stars: Int
 }
 
