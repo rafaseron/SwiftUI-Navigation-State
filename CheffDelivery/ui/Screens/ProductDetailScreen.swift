@@ -15,5 +15,5 @@ struct ProductDetailScreen: View {
 }
 
 #Preview {
-    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", image: "acai-panda-logo"))
+    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo"))
 }

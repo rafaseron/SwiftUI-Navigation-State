@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct ListCardItem: View {
+struct StoreCardItem: View {
     let shopItem: Loja
     
     var body: some View {
         HStack(spacing: 15){
-            Image(shopItem.image)
+            Image(shopItem.logoImage)
             Text(shopItem.label)
         }
     }
 }
 
-struct ShopsList: View{
+struct StoresList: View{
     let shopsList: [Loja]
     
     var body: some View{
@@ -30,7 +30,7 @@ struct ShopsList: View{
                 NavigationLink {
                     ProductDetailScreen(shopItem: loja)
                 } label: {
-                    ListCardItem(shopItem: loja)
+                    StoreCardItem(shopItem: loja)
                 }
             }
         }.padding(.horizontal, 40)
@@ -42,5 +42,5 @@ struct ShopsList: View{
 
 #Preview {
     //ListCardItem(shopItem: Loja(id: 1, label: "Acai Panda", image: "acai-panda-logo"))
-    ShopsList(shopsList: listaDeLojas)
+    StoresList(shopsList: listaDeLojas)
 }

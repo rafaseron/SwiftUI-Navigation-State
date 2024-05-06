@@ -17,5 +17,6 @@ struct Categoria: Identifiable{
 struct Loja: Identifiable{
     let id: Int
     let label: String
-    let image: String
+    let logoImage: String
+    //let hearderImage: String
 }

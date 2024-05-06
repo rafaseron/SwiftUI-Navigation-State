@@ -20,7 +20,7 @@ struct HomeScreen: View {
                             .padding(.top, 50)
                         CarouselBanners(bannerList: imageList)
                         
-                        ShopsList(shopsList: listaDeLojas)
+                        StoresList(shopsList: listaDeLojas)
                         
                     }.offset(y: -70)
                     //.frame(height: 350)

@@ -18,11 +18,11 @@ let listaCategorias: [Categoria] = [
 ]
 
 let listaDeLojas: [Loja] = [
-    Loja(id: 1, label: "Açaí Panda", image: "acai-panda-logo"),
-    Loja(id: 2, label: "Padaria", image: "bakery-logo"),
-    Loja(id: 3, label: "Carbron", image: "carbron-logo"),
-    Loja(id: 4, label: "Food Court", image: "food-court-logo"),
-    Loja(id: 5, label: "Monstro Burger", image: "monstro-burger-logo"),
+    Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo"),
+    Loja(id: 2, label: "Padaria", logoImage: "bakery-logo"),
+    Loja(id: 3, label: "Carbron", logoImage: "carbron-logo"),
+    Loja(id: 4, label: "Food Court", logoImage: "food-court-logo"),
+    Loja(id: 5, label: "Monstro Burger", logoImage: "monstro-burger-logo"),
 ]
 
 //acai-panda-logo
