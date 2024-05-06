@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProductDetailScreen: View {
     let shopItem: Loja
+    
+    
     var body: some View {
         Text(shopItem.label)
     }

@@ -25,6 +25,16 @@ let listaDeLojas: [Loja] = [
     Loja(id: 5, label: "Monstro Burger", logoImage: "monstro-burger-logo"),
 ]
 
+let productList: [Product] = [
+    Product(id: 1, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai"),
+    Product(id: 2, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai"),
+    Product(id: 3, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai"),
+    Product(id: 4, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai"),
+    Product(id: 5, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai"),
+    Product(id: 6, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai"),
+    Product(id: 7, nome: "Açaí", descricao: "Açaí Polpa Norte", preco: "30,00", image: "large_acai")
+]
+
 //acai-panda-logo
 //bakery-logo
 //carbron-logo

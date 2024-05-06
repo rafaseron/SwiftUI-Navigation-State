@@ -18,5 +18,13 @@ struct Loja: Identifiable{
     let id: Int
     let label: String
     let logoImage: String
-    //let hearderImage: String
+    //let headerImage: String
+}
+
+struct Product: Identifiable{
+    let id: Int
+    let nome: String
+    let descricao: String
+    let preco: String
+    let image: String
 }
