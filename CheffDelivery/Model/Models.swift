@@ -21,12 +21,13 @@ struct Loja: Identifiable{
     let headerImage: String
     let address: String
     let stars: Int
+    let products: [Product]
 }
 
 struct Product: Identifiable{
     let id: Int
     let nome: String
     let descricao: String
-    let preco: String
+    let preco: Double
     let image: String
 }
