@@ -14,7 +14,7 @@ struct CategoriaCardView: View {
         VStack(spacing: 5){
             Image(categoria.image)
                 .scaledToFit()
-                .cornerRadius(3.0)
+                .clipShape(RoundedRectangle(cornerRadius: 3))
                 .fixedSize(horizontal: true, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             Text(categoria.label)
                 .font(.system(size: 10))

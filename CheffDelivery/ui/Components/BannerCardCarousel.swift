@@ -24,7 +24,7 @@ struct BannerItem: View {
             Image(image.photo)
                 .resizable()
                 .scaledToFit()
-                .cornerRadius(3)
+                .clipShape(RoundedRectangle(cornerRadius: 3))
                 }
     }
 
