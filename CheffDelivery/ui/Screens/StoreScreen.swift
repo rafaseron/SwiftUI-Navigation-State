@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StoreScreen: View {
     let loja: Loja
-    //let productList: [Product]
     
     
     var body: some View {
@@ -22,7 +21,9 @@ struct StoreScreen: View {
                     Image(loja.headerImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 240)
+                        .frame(height: 220)
+                        .cornerRadius(20)
+                        .padding(.horizontal)
                     
                     VStack(spacing: 8){
                         HStack(spacing: 150){
@@ -52,7 +53,7 @@ struct StoreScreen: View {
                 }
             }
             
-        }
+        }.navigationBarBackButtonHidden()
         
     }
 }
