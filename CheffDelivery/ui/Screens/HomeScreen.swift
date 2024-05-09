@@ -27,7 +27,7 @@ struct HomeScreen: View {
                 }
                 
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 
