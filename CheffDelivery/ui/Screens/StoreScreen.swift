@@ -64,27 +64,12 @@ struct StoreAddress: View {
         HStack(spacing: 15){
             Text(store.address)
             
-            //Arrumar esse ForEach que ele nao funciona usando Int para iterar
-            /*
-            ForEach (starsArray) { stars in
+            ForEach(1...store.stars, id: \.self){ star in
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
-            }*/
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .frame(width: 8)
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .frame(width: 8)
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .frame(width: 8)
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .frame(width: 8)
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .frame(width: 8)
+                    .frame(width: 8)
+            }
+            
         }.offset(x: 15)
     }
 }
