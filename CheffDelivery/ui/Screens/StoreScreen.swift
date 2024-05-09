@@ -13,39 +13,45 @@ struct StoreScreen: View {
     
     
     var body: some View {
-        ScrollView{
-            LazyVStack(alignment: .leading, spacing: 16){
-                Image(loja.headerImage)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 240)
-                
-                VStack(spacing: 8){
-                    HStack(spacing: 150){
-                        Text(loja.label)
-                            .font(.title)
-                            .bold()
+        
+        VStack{
+            StoreNavigationBar(loja: loja)
+            
+            ScrollView{
+                LazyVStack(alignment: .leading, spacing: 16){
+                    Image(loja.headerImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 240)
+                    
+                    VStack(spacing: 8){
+                        HStack(spacing: 150){
+                            Text(loja.label)
+                                .font(.title)
+                                .bold()
+                            
+                            Image(loja.logoImage)
+                        }.offset(x: 20)
                         
-                        Image(loja.logoImage)
-                    }.offset(x: 20)
+                        Spacer()
+                        
+                        StoreAddress(store: loja)
+                    }
                     
                     Spacer()
                     
-                    StoreAddress(store: loja)
+                    Text("Produtos")
+                        .font(.title2)
+                        .bold()
+                        .offset(x: 20)
+                    
+                    Spacer()
+                    
+                    ProductCardList(productList: loja.products)
+                        .offset(x: 18)
                 }
-                
-                Spacer()
-                
-                Text("Produtos")
-                    .font(.title2)
-                    .bold()
-                    .offset(x: 20)
-                
-                Spacer()
-                
-                ProductCardList(productList: loja.products)
-                    .offset(x: 18)
             }
+            
         }
         
     }
@@ -84,5 +90,5 @@ struct StoreAddress: View {
 }
 
 #Preview {
-    StoreScreen(loja: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Cuiaba Dourados MS", stars: 4, products: productList)/*, productList: productList*/)
+    StoreScreen(loja: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Principal, 123 São Paulo SP", stars: 4, products: acaiPandaProductList))
 }
