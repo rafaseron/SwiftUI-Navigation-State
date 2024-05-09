@@ -49,7 +49,7 @@ struct ProductCardList: View {
                     ProductDetailScreen(produto: product)
                 } label: {
                     ProductCardItem(product: product)
-                }
+                }.foregroundStyle(.black)
 
             }
             
