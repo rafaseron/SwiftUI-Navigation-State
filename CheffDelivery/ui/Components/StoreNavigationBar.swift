@@ -20,16 +20,23 @@ struct BotaoLojaNavigationBar: View {
 
 struct StoreNavigationBar: View {
     let loja: Loja
+    @Environment(\.presentationMode) var isPresented
     
     var body: some View {
         HStack{
-            NavigationLink {
-                HomeScreen()
-            } label: {
+            Button{
+                isPresented.wrappedValue.dismiss()
+            }label: {
                 BotaoLojaNavigationBar()
                     .padding()
             }
-
+            
+            /*NavigationLink {
+                //HomeScreen()
+            } label: {
+                BotaoLojaNavigationBar()
+                    .padding()
+            }*/
             
             Spacer()
             
