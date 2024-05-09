@@ -19,7 +19,7 @@ struct ProductCardItem: View{
                     .font(.title3)
                 Text(product.descricao)
                     .font(.body)
-                Text("R$ \(product.preco)")
+                Text("R$ \(product.preco.toPriceFormat())")
                     .bold()
             }
             
@@ -30,6 +30,7 @@ struct ProductCardItem: View{
                 .scaledToFit()
                 .cornerRadius(20)
                 .frame(height: 80)
+                .shadow(radius: 10)
         }
         
     }

@@ -17,7 +17,7 @@ struct StoreScreen: View {
         VStack{
             StoreNavigationBar(loja: loja)
             
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 LazyVStack(alignment: .leading, spacing: 16){
                     Image(loja.headerImage)
                         .resizable()
