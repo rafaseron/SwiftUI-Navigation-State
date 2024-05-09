@@ -17,9 +17,9 @@ struct ProductCardItem: View{
                 Text(product.nome)
                     .bold()
                     .font(.title3)
-                Text(product.description)
+                Text(product.descricao)
                     .font(.body)
-                Text(product.preco)
+                Text("R$ \(product.preco)")
                     .bold()
             }
             

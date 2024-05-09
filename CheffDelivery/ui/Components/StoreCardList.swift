@@ -28,7 +28,7 @@ struct StoresList: View{
             
             ForEach(shopsList){ loja in
                 NavigationLink {
-                    ProductDetailScreen(shopItem: loja)
+                    StoreScreen(loja: loja)
                 } label: {
                     StoreCardItem(shopItem: loja)
                 }

@@ -7,31 +7,31 @@
 
 import SwiftUI
 
-struct ProductDetailScreen: View {
-    let shopItem: Loja
+struct StoreScreen: View {
+    let loja: Loja
     //let productList: [Product]
     
     
     var body: some View {
         ScrollView{
             LazyVStack(alignment: .leading, spacing: 16){
-                Image(shopItem.headerImage)
+                Image(loja.headerImage)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 240)
                 
                 VStack(spacing: 8){
                     HStack(spacing: 150){
-                        Text(shopItem.label)
+                        Text(loja.label)
                             .font(.title)
                             .bold()
                         
-                        Image(shopItem.logoImage)
+                        Image(loja.logoImage)
                     }.offset(x: 20)
                     
                     Spacer()
                     
-                    StoreAddress(store: shopItem)
+                    StoreAddress(store: loja)
                 }
                 
                 Spacer()
@@ -43,7 +43,7 @@ struct ProductDetailScreen: View {
                 
                 Spacer()
                 
-                ProductCardList(productList: productList)
+                ProductCardList(productList: loja.products)
                     .offset(x: 18)
             }
         }
@@ -84,5 +84,5 @@ struct StoreAddress: View {
 }
 
 #Preview {
-    ProductDetailScreen(shopItem: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Cuiaba Dourados MS", stars: 4)/*, productList: productList*/)
+    StoreScreen(loja: Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Cuiaba Dourados MS", stars: 4, products: productList)/*, productList: productList*/)
 }
