@@ -28,7 +28,7 @@ struct ProductCardItem: View{
             Image(product.image)
                 .resizable()
                 .scaledToFit()
-                .cornerRadius(20)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 .frame(height: 80)
                 .shadow(radius: 10)
         }
@@ -44,7 +44,13 @@ struct ProductCardList: View {
         LazyVStack(alignment: .leading, spacing: 16){
             
             ForEach(productList){ product in
-                ProductCardItem(product: product)
+                
+                NavigationLink {
+                    ProductDetailScreen(produto: product)
+                } label: {
+                    ProductCardItem(product: product)
+                }
+
             }
             
         }.frame(width: 360)
