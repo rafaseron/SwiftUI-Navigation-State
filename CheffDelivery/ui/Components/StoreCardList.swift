@@ -43,6 +43,15 @@ struct StoresList: View{
                 Spacer()
                 
                 Menu {
+                    
+                    Button(action: {
+                        estrelasParaFiltrar = 0
+                    }, label: {
+                        Text("Limpar filtros")
+                    }).foregroundStyle(.blue)
+                    
+                    Divider()
+                    
                     ForEach(1...5, id: \.self){ estrela in
                         Button(action: {
                             estrelasParaFiltrar = estrela
