@@ -20,6 +20,18 @@ struct StoreCardItem: View {
 
 struct StoresList: View{
     let shopsList: [Loja]
+    @State var estrelasParaFiltrar = 0
+    
+    //lojasFiltradas precisa ser uma property computada por causa do Swift
+    var lojasFiltradas: [Loja] {
+        return shopsList.filter { Loja in
+            Loja.stars >= estrelasParaFiltrar
+        }
+    }
+    /* Para o Swift, shopsList nao foi inicializado ainda, portanto, não é acessível. Para contornar
+     este problema, podemos usar uma 'variavel computada'.
+     Também, atualizações de Valor de 'estrelasParaFiltrar' são computadas dentro desse escopo, não
+     precisando que 'lojasFiltradas' precise da notacao @State - e o Swift não deixa também */
     
     var body: some View{
         
@@ -33,7 +45,7 @@ struct StoresList: View{
                 Menu {
                     ForEach(1...5, id: \.self){ estrela in
                         Button(action: {
-                            //action code
+                            estrelasParaFiltrar = estrela
                         }, label: {
                             if estrela>1 {
                                 Text(" A partir de \(estrela) estrelas")
@@ -50,13 +62,36 @@ struct StoresList: View{
                 
             }
             
-            ForEach(shopsList){ loja in
-                NavigationLink {
-                    StoreScreen(loja: loja)
-                } label: {
-                    StoreCardItem(shopItem: loja)
+            if lojasFiltradas.isEmpty{
+                VStack(alignment: .leading, spacing: 16){
+                    
+                    HStack{
+                        Spacer()
+                        
+                        Image(systemName: "slash.circle")
+                            .foregroundStyle(.colorRed)
+                            .font(.title)
+                        
+                        Spacer()
+                    }
+                    
+                    Text("Oops!")
+                        .foregroundStyle(.black)
+                        .bold()
+                        .font(.title2)
+                    
+                    Text("Sem resultados para este filtro")
+                }.offset(y: 50)
+            }else{
+                ForEach(lojasFiltradas){ loja in
+                    NavigationLink {
+                        StoreScreen(loja: loja)
+                    } label: {
+                        StoreCardItem(shopItem: loja)
+                    }
                 }
             }
+            
         }.padding(.horizontal, 40)
             .foregroundStyle(.black)
         

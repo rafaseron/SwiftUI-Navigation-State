@@ -20,9 +20,9 @@ let listaCategorias: [Categoria] = [
 let listaDeLojas: [Loja] = [
     Loja(id: 1, label: "Açaí Panda", logoImage: "acai-panda-logo", headerImage: "acai-panda-header", address: "Rua Principal, 123 São Paulo SP", stars: 4, products: acaiPandaProductList),
     Loja(id: 2, label: "Padaria", logoImage: "bakery-logo", headerImage: "bakery-header", address: "Rua Principal, 123 São Paulo SP", stars: 4, products: padariaProductList),
-    Loja(id: 3, label: "Carbron", logoImage: "carbron-logo", headerImage: "carbron-header", address: "Rua Principal, 123 São Paulo SP", stars: 4, products: carbronProductList),
-    Loja(id: 4, label: "Food Court", logoImage: "food-court-logo", headerImage: "food-court-header", address: "Rua Principal, 123 São Paulo SP", stars: 4, products: foodCourtProductList),
-    Loja(id: 5, label: "Monstro Burger", logoImage: "monstro-burger-logo", headerImage: "monstro-burger-header", address: "Rua Principal, 123 São Paulo SP", stars: 4, products: monstroBurguerProductList),
+    Loja(id: 3, label: "Carbron", logoImage: "carbron-logo", headerImage: "carbron-header", address: "Rua Principal, 123 São Paulo SP", stars: 3, products: carbronProductList),
+    Loja(id: 4, label: "Food Court", logoImage: "food-court-logo", headerImage: "food-court-header", address: "Rua Principal, 123 São Paulo SP", stars: 2, products: foodCourtProductList),
+    Loja(id: 5, label: "Monstro Burger", logoImage: "monstro-burger-logo", headerImage: "monstro-burger-header", address: "Rua Principal, 123 São Paulo SP", stars: 1, products: monstroBurguerProductList),
 ]
 
 // Sample Produt List
