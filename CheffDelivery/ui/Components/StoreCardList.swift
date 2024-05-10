@@ -22,9 +22,33 @@ struct StoresList: View{
     let shopsList: [Loja]
     
     var body: some View{
+        
         LazyVStack(alignment: .leading, spacing: 10){
-            Text("Lojas")
-                .font(.headline)
+            HStack{
+                Text("Lojas")
+                    .font(.headline)
+                
+                Spacer()
+                
+                Menu {
+                    ForEach(1...5, id: \.self){ estrela in
+                        Button(action: {
+                            //action code
+                        }, label: {
+                            if estrela>1 {
+                                Text(" A partir de \(estrela) estrelas")
+                            } else {
+                                Text(" A partir de \(estrela) estrela")
+                            }
+                        })
+                    }
+                    
+                } label: {
+                    Text("Filtrar")
+                }
+
+                
+            }
             
             ForEach(shopsList){ loja in
                 NavigationLink {
