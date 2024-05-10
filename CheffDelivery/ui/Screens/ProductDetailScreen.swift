@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductDetailScreen: View {
     let produto: Product
+    @State var produtoQuantidade: Int = 1
     //adicionar acesso ao contexto para poder adicionar funcao de voltar ao botao
     
     var body: some View {
@@ -49,17 +50,23 @@ struct ProductDetailScreen: View {
                     .font(.title2)
                     .bold()
                 HStack{
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        if produtoQuantidade>1{
+                            produtoQuantidade -= 1
+                        }
+                    }, label: {
                         Image(systemName: "minus.circle.fill")
                             .font(.title2)
                             .foregroundStyle(.colorRed)
                     })
                     
-                    Text("1")
+                    Text("\(produtoQuantidade)")
                         .bold()
                         .font(.title2)
                     
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        produtoQuantidade += 1
+                    }, label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.title2)
                             .foregroundStyle(.colorRed)
@@ -81,7 +88,7 @@ struct ProductDetailScreen: View {
                         .background(Color("ColorRed"))
                         .clipShape(RoundedRectangle(cornerRadius: 32))
                         .shadow(color: Color("ColorRed").opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 6, y:8)
-                })
+                }).offset(y: 60)
                 
             }.offset(y: 120)
             
