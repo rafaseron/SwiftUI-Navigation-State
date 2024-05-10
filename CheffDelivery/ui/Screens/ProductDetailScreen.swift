@@ -10,23 +10,8 @@ import SwiftUI
 struct ProductDetailScreen: View {
     let produto: Product
     @State var produtoQuantidade: Int = 1
-    //adicionar acesso ao contexto para poder adicionar funcao de voltar ao botao
     
     var body: some View {
-        
-        HStack{
-            Button(action: {
-                //code
-            }, label: {
-                Image(systemName: "arrow.backward")
-                    .fontWeight(.bold)
-                    .font(.body)
-                    .foregroundStyle(.colorRed)
-            }).padding(.horizontal)
-                .padding(5)
-            Spacer()
-        }
-        
         ScrollView{
             Image(produto.image)
                 .resizable()

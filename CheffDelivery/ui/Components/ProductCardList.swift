@@ -39,18 +39,22 @@ struct ProductCardItem: View{
 
 struct ProductCardList: View {
     let productList: [Product]
+    @State private var productClick: Product?
     
     var body: some View {
         LazyVStack(alignment: .leading, spacing: 16){
             
             ForEach(productList){ product in
                 
-                NavigationLink {
-                    ProductDetailScreen(produto: product)
-                } label: {
+                Button(action: {
+                    productClick = product
+                }, label: {
                     ProductCardItem(product: product)
-                }.foregroundStyle(.black)
-
+                }).foregroundStyle(.black)
+                    .sheet(item: $productClick) { product in
+                        ProductDetailScreen(produto: product)
+                    }
+                
             }
             
         }.frame(width: 360)
