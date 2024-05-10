@@ -81,6 +81,19 @@ struct StoresList: View{
                         .font(.title2)
                     
                     Text("Sem resultados para este filtro")
+                    
+                    HStack{
+                        Spacer()
+                        
+                        Button(action: {
+                            estrelasParaFiltrar = 0
+                        }, label: {
+                            Text("Limpar filtros")
+                        }).foregroundStyle(.blue)
+                        
+                        Spacer()
+                    }
+                    
                 }.offset(y: 50)
             }else{
                 ForEach(lojasFiltradas){ loja in
