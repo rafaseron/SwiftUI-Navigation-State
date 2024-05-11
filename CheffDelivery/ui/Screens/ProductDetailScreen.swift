@@ -31,32 +31,16 @@ struct ProductDetailScreen: View {
             }.offset(y: 20)
             
             VStack(spacing: 8){
-                Text("Quantidade")
-                    .font(.title2)
-                    .bold()
-                HStack{
-                    Button(action: {
-                        if produtoQuantidade>1{
-                            produtoQuantidade -= 1
-                        }
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.title2)
-                            .foregroundStyle(.colorRed)
-                    })
-                    
-                    Text("\(produtoQuantidade)")
-                        .bold()
-                        .font(.title2)
-                    
-                    Button(action: {
-                        produtoQuantidade += 1
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title2)
-                            .foregroundStyle(.colorRed)
-                    })
-                }
+                
+                ProductQuantityComponent(produtoQuantidade: $produtoQuantidade)
+                //Precisa passar usando $ porque estamos passando uma varivel de @State para um Componente que espera uma @Binding
+                
+                /* A variavel de @State é a fonte unica da verdade.
+                 Para passar seu Valor (e atualizacoes dele) para o Componente que espera receber um @Binding, precisa passar o valor usando '$'.
+                 Dessa forma, o Componente Secundário consegue 'acessar e modificar' o 'Valor' da variável original */
+                
+                //Text para fins didáticos. É para ver a ligacao das variaveis que foi feita através do Binding
+                //Text("\(produtoQuantidade)")
                 
                 Spacer()
                 
